@@ -5,11 +5,9 @@ using System.Threading.Tasks;
 
 namespace SCRUMAssignment.Models
 {
-    public class Kategori
+    public class Emne
     {
         public int Id { get; set; }
-        public string ImgPath { get; set; }
-        public string KategoriNavn { get; set; }
-        public List<Emne> Emner { get; set; }
+        public string Indhold { get; set; }
     }
 }
