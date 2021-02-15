@@ -1,0 +1,33 @@
+﻿@page
+@model SCRUMAssignment.Pages.Shared.EmneModel
+@{
+    ViewData["Title"] = "Kategorier og emner";
+}
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+<h1>@ViewData["Title"]</h1>
+
+<p>This is a page</p>
+
+<table style="width:100%">
+    @foreach (Models.Kategori kategori in Model.Liste.Values)
+    {
+        <tr>
+            <th>@kategori.KategoriNavn</th>
+            <th>Mulighedder</th>
+        </tr>
+        @foreach (Models.Emne emne in kategori.Emner)
+        {
+            <tr>
+                <td>@emne.Indhold</td>
+                <td><a asp-page="" class="btn btn-primary m-1">Slet</a></td>
+            </tr>
+        }
+    }
+
+
+
+    </table>
