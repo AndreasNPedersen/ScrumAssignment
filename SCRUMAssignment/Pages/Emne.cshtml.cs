@@ -9,6 +9,13 @@ namespace SCRUMAssignment.Pages.Shared
 {
     public class EmneModel : PageModel
     {
+
+        public Dictionary<int, Models.Kategori> Liste { get; set; }
+
+        public EmneModel()
+        {
+            Liste = new Services.KategoriHandler().GetDictionary();
+        }
         public void OnGet()
         {
         }
