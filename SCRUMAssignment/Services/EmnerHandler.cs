@@ -10,7 +10,7 @@ namespace SCRUMAssignment.Services
     public class EmneHandler
     {
 
-        private string filePath = @"\Data\DataEmne.json";
+        private string filePath = @"\Data\DataEmner.json";
 
         public void Create(Emne emne)
         {
