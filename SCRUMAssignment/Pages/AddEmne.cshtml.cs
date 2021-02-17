@@ -21,9 +21,9 @@ namespace SCRUMAssignment.Pages
             if (!ModelState.IsValid)
             {
                 return Page();
-
-               new EmneHandler().Create(Emne);
+ 
             }
+            new EmneHandler().Create(Emne);
             return RedirectToPage("Index");
         }
     }
