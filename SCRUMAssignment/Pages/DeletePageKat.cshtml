@@ -1,0 +1,15 @@
+﻿@page
+@model SCRUMAssignment.Pages.DeletePageKatModel
+@{
+}
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">Sletning af @Model.Kategori.Id  @Model.Kategori.KategoriNavn</h1>
+        <p class="lead">Billede liggende: @Model.Kategori.ImgPath</p>
+        <hr class="my-4">
+        <p class="lead">
+            <a class="btn btn-danger btn-lg" asp-page="/Index" role="button">Slet</a>
+        </p>
+    </div>
+
+</div>
