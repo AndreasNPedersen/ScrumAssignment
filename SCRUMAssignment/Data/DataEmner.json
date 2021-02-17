@@ -2,5 +2,13 @@
   "5": {
     "Id": 5,
     "Indhold": "Tester123"
+  },
+  "321": {
+    "Id": 321,
+    "Indhold": "hejsa"
+  },
+  "1234": {
+    "Id": 1234,
+    "Indhold": "hejsa2"
   }
 }

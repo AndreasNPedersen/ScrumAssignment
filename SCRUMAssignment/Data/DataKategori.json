@@ -2,19 +2,22 @@
   "1": {
     "Id": 1,
     "ImgPath": "srthgth",
-    "KategoriNavn": "dsrgdr",
-    "Emner": null
-  },
-  "32": {
-    "Id": 32,
-    "ImgPath": "tshgd",
-    "KategoriNavn": "dsrgr",
-    "Emner": null
-  },
-  "31": {
-    "Id": 31,
-    "ImgPath": "afgrs",
-    "KategoriNavn": "fasdf",
-    "Emner": null
+    "KategoriNavn": "Jokes",
+    "Emner": null,
+    "5": {
+      "Id": 5,
+      "Indhold": "Tester123"
+    },
+    "32": {
+      "Id": 32,
+      "ImgPath": "tshgd",
+      "KategoriNavn": "Facts",
+      "Emner": null
+    },
+    "31": {
+      "Id": 31,
+      "ImgPath": "afgrs",
+      "KategoriNavn": "Random",
+      "Emner": null
+    }
   }
-}
