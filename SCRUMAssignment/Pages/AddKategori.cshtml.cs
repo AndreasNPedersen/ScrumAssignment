@@ -23,6 +23,7 @@ namespace SCRUMAssignment.Pages
             {
                 return Page();
             }
+            Kategori.Emner = new List<Emne>();
             new KategoriHandler().Create(Kategori);
             return RedirectToPage("Index");
         }

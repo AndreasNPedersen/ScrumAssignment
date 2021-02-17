@@ -1,8 +1,24 @@
 {
   "1": {
     "Id": 1,
-    "ImgPath": "srthgth",
-    "KategoriNavn": "dsrgdr",
-    "Emner": null
+    "ImgPath": "hej2",
+    "KategoriNavn": "hej",
+    "Emner": [
+      {
+        "Id": 13432,
+        "Indhold": "nemlig"
+      }
+    ]
+  },
+  "123": {
+    "Id": 123,
+    "ImgPath": "hej1",
+    "KategoriNavn": "Tal",
+    "Emner": [
+      {
+        "Id": 3456,
+        "Indhold": "1"
+      }
+    ]
   }
 }

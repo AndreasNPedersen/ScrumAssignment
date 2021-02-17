@@ -29,6 +29,18 @@ namespace SCRUMAssignment.Services
             jsonKategori.WriteJsonFile(dic, filePath);
         }
 
+        public void Update(Kategori kategori, int id)
+        {
+            JsonEmne<Kategori> jsonKategori = new JsonEmne<Kategori>();
+            Dictionary<int, Kategori> dic = jsonKategori.ReadJsonFile(filePath);
+
+            if (dic[id] != null)
+            {
+                dic[id] = kategori;
+                jsonKategori.WriteJsonFile(dic, filePath);
+            }
+        }
+
         public Dictionary<int, Kategori> FilterDictionary(int filter)
         {
             JsonEmne<Kategori> jsonKategori = new JsonEmne<Kategori>();

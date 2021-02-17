@@ -11,14 +11,17 @@
 </div>
 
 <div class="container">
-    @foreach (Models.Kategori kategori in Model.Kategori.Values)
-    {
-    <img class="card-img-top" src="/img/@kategori.ImgPath" alt="Card image cap">
-    <div class="card-body">
-        <h5 class="card-title">@kategori.KategoriNavn</h5>
-        <p class="card-text">tekst omkring kategorien</p>
+    <div class="card-deck">
+        @foreach (Models.Kategori kategori in Model.Kategori.Values)
+        {
+            <div class="card bg-light mb-3">
+                <img class="card-img-top" src="/img/@kategori.ImgPath" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@kategori.KategoriNavn</h5>
+                    <p class="card-text">tekst omkring kategorien</p>
+                </div>
+                <div class="card-footer"><button type="button" class="btn btn-success">Vælg</button></div>
+            </div>
+        }
     </div>
-    
-
-    }
 </div>
