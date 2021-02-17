@@ -9,6 +9,7 @@ namespace SCRUMAssignment.Pages
 {
     public class DeletePageEmnModel : PageModel
     {
+        [BindProperty]
         public Models.Emne Emne { get; set; }
         public void OnGet(int id)
         {

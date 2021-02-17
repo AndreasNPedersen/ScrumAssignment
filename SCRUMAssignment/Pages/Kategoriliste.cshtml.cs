@@ -14,10 +14,11 @@ namespace SCRUMAssignment.Pages.Shared
 
         public EmneModel()
         {
-            Liste = new Services.KategoriHandler().GetDictionary();
+            
         }
         public void OnGet()
         {
+            Liste = new Services.KategoriHandler().GetDictionary();
         }
     }
 }

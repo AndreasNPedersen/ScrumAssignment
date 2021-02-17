@@ -10,11 +10,14 @@
         <p class="lead">@Model.Emne.Indhold</p>
         <hr class="my-4">
         <p class="lead">
-            <form method="post">
-                <input type="hidden" asp-for="@Model.Emne.Id" />
-                <a class="btn btn-danger btn-lg" asp-page="/Index" role="button">Slet</a>
-            </form>
+            
         </p>
+        <form method="post">
+            <a class="btn btn-danger btn-lg" asp-page="/Index" role="button">Nej</a>
+            <input type="hidden" asp-for="@Model.Emne.Id" />
+            <input type="submit" class="btn btn-danger float-right" value="Slet Emne" style="padding:1rem;" />
+
+        </form>
     </div>
     
 </div>

@@ -1,23 +1,42 @@
 {
   "1": {
     "Id": 1,
-    "ImgPath": "srthgth",
-    "KategoriNavn": "Jokes",
-    "Emner": null,
-    "5": {
-      "Id": 5,
-      "Indhold": "Tester123"
-    },
-    "32": {
-      "Id": 32,
-      "ImgPath": "tshgd",
-      "KategoriNavn": "Facts",
-      "Emner": null
-    },
-    "31": {
-      "Id": 31,
-      "ImgPath": "afgrs",
-      "KategoriNavn": "Random",
-      "Emner": null
-    }
+    "ImgPath": "123",
+    "KategoriNavn": "Tal",
+    "Emner": [
+      {
+        "Id": 2,
+        "Indhold": "1"
+      }
+    ]
+  },
+  "2": {
+    "Id": 2,
+    "ImgPath": "123",
+    "KategoriNavn": "Bogstav",
+    "Emner": [
+      {
+        "Id": 1,
+        "Indhold": "A"
+      }
+    ]
+  },
+  "3": {
+    "Id": 3,
+    "ImgPath": "nva",
+    "KategoriNavn": "Navne",
+    "Emner": []
+  },
+  "4": {
+    "Id": 4,
+    "ImgPath": "er",
+    "KategoriNavn": "Efternavne",
+    "Emner": []
+  },
+  "6": {
+    "Id": 6,
+    "ImgPath": "emo",
+    "KategoriNavn": "Emojis",
+    "Emner": []
   }
+}
