@@ -2,30 +2,37 @@
 @model SCRUMAssignment.Pages.AddKategoriModel
 @{
 }
-<h1>Add Kategori</h1>
+<body>
+    <div class="container">
 
-<form method="post">
+        <h1>Add Kategori</h1>
 
-    <div class="form-group">
-        <label asp-for="@Model.Kategori.Id" class="control-label"> Id </label>
-        <input asp-for="@Model.Kategori.Id" class="form-control" />
-        <span asp-validation-for="@Model.Kategori.Id" class="text-danger"></span>
+        <form method="post">
+
+            <div class="form-group">
+                <label asp-for="@Model.Kategori.Id" class="control-label"> Id </label>
+                <input asp-for="@Model.Kategori.Id" class="form-control" />
+                <span asp-validation-for="@Model.Kategori.Id" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="@Model.Kategori.KategoriNavn" class="control-label">KategoriNavn </label>
+                <input asp-for="@Model.Kategori.KategoriNavn" class="form-control" />
+                <span asp-validation-for="@Model.Kategori.KategoriNavn" class="text-danger"></span>
+
+            </div>
+
+            <div class="form-group">
+                <label asp-for="@Model.Kategori.ImgPath" class="control-label"> ImgPath </label>
+                <input asp-for="@Model.Kategori.ImgPath" class="form-control" />
+                <span asp-validation-for="@Model.Kategori.ImgPath" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
     </div>
+</body>
 
-    <div class="form-group">
-        <label asp-for="@Model.Kategori.KategoriNavn" class="control-label">KategoriNavn </label>
-        <input asp-for="@Model.Kategori.KategoriNavn" class="form-control" />
-        <span asp-validation-for="@Model.Kategori.KategoriNavn" class="text-danger"></span>
 
-    </div>
-    
-    <div class="form-group">
-        <label asp-for="@Model.Kategori.ImgPath" class="control-label"> ImgPath </label>
-        <input asp-for="@Model.Kategori.ImgPath" class="form-control" />
-        <span asp-validation-for="@Model.Kategori.ImgPath" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <input type="submit" value="Create" class="btn btn-primary" />
-    </div>
-</form>

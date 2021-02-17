@@ -1,24 +1,23 @@
 {
   "1": {
     "Id": 1,
-    "ImgPath": "hej2",
-    "KategoriNavn": "hej",
-    "Emner": [
-      {
-        "Id": 13432,
-        "Indhold": "nemlig"
-      }
-    ]
-  },
-  "123": {
-    "Id": 123,
-    "ImgPath": "hej1",
-    "KategoriNavn": "Tal",
-    "Emner": [
-      {
-        "Id": 3456,
-        "Indhold": "1"
-      }
-    ]
+    "ImgPath": "srthgth",
+    "KategoriNavn": "Jokes",
+    "Emner": null,
+    "5": {
+      "Id": 5,
+      "Indhold": "Tester123"
+    },
+    "32": {
+      "Id": 32,
+      "ImgPath": "tshgd",
+      "KategoriNavn": "Facts",
+      "Emner": null
+    },
+    "31": {
+      "Id": 31,
+      "ImgPath": "afgrs",
+      "KategoriNavn": "Random",
+      "Emner": null
+    }
   }
-}

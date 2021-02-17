@@ -21,15 +21,18 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/AddEmne">Tilføj Emne</a>
+                        <li id="dropdownmenu" class="btn-group">
+                            <button type="button" class="btn btn-light" href="/Index">Kontrol Panel</button>
+                            <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="AddKategori">Tilføj Kategori</a>
+                                <a class="dropdown-item" href="AddEmne">Tilføj Emne</a>
+                                <a class="dropdown-item" href="Kategoriliste">Se Kategoriliste</a>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/AddKategori">Tilføj Kategory</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Emne">Kontrol panel</a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
