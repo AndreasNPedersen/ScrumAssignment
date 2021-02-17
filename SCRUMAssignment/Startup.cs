@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SCRUMAssignment.Interfaces;
 using SCRUMAssignment.Models;
 using SCRUMAssignment.Services;
 
@@ -26,7 +25,6 @@ namespace SCRUMAssignment
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddTransient<IEventRepository, JsonEventRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

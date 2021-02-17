@@ -4,18 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using SCRUMAssignment.Models;
 using SCRUMAssignment.Data;
-
+using System.IO;
 
 namespace SCRUMAssignment.Services
 {
     public class KategoriHandler
     {
 
-        private string filePath = @"\Data\DataKategori.json";
+        private string filePath = Path.GetFullPath("./Data/DataKategori.json", Environment.CurrentDirectory);
 
         public void Create(Kategori kategori)
         {
-            JsonKategori jsonKategori = new JsonKategori();
+            JsonEmne<Kategori> jsonKategori = new JsonEmne<Kategori>();
             Dictionary<int, Kategori> dic = jsonKategori.ReadJsonFile(filePath);
             dic.Add(kategori.Id, kategori);
             jsonKategori.WriteJsonFile(dic, filePath);
@@ -23,7 +23,7 @@ namespace SCRUMAssignment.Services
 
         public void Delete(int id)
         {
-            JsonKategori jsonKategori = new JsonKategori();
+            JsonEmne<Kategori> jsonKategori = new JsonEmne<Kategori>();
             Dictionary<int, Kategori> dic = jsonKategori.ReadJsonFile(filePath);
             dic.Remove(id);
             jsonKategori.WriteJsonFile(dic, filePath);
@@ -31,7 +31,7 @@ namespace SCRUMAssignment.Services
 
         public Dictionary<int, Kategori> FilterDictionary(int filter)
         {
-            JsonKategori jsonKategori = new JsonKategori();
+            JsonEmne<Kategori> jsonKategori = new JsonEmne<Kategori>();
             Dictionary<int, Kategori> dic = jsonKategori.ReadJsonFile(filePath);
             Dictionary<int, Kategori> dicC = new Dictionary<int, Kategori>();
             foreach (Kategori kategori in dic.Values)
@@ -46,14 +46,14 @@ namespace SCRUMAssignment.Services
 
         public Kategori Get(int id)
         {
-            JsonKategori jsonKategori = new JsonKategori();
+            JsonEmne<Kategori> jsonKategori = new JsonEmne<Kategori>();
             Dictionary<int, Kategori> dic = jsonKategori.ReadJsonFile(filePath);
             return dic[id];
         }
 
         public Dictionary<int, Kategori> GetDictionary()
         {
-            JsonKategori jsonKategori = new JsonKategori();
+            JsonEmne<Kategori> jsonKategori = new JsonEmne<Kategori>();
             return jsonKategori.ReadJsonFile(filePath);
 
         }

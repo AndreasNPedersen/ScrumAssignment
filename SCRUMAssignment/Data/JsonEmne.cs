@@ -8,15 +8,15 @@ using SCRUMAssignment.Models;
 
 namespace SCRUMAssignment.Data
 {
-    public class JsonEmne
+    public class JsonEmne<T>
     {
-        public Dictionary<int, Emne> ReadJsonFile(string filePath)
+        public Dictionary<int, T> ReadJsonFile(string filePath)
         {
             string input = File.ReadAllText(filePath);
-            return JsonConvert.DeserializeObject<Dictionary<int, Emne>>(input);
+            return JsonConvert.DeserializeObject<Dictionary<int, T>>(input);
         }
 
-        public void WriteJsonFile(Dictionary<int, Emne> dic, string filePath)
+        public void WriteJsonFile(Dictionary<int, T> dic, string filePath)
         {
             string output = JsonConvert.SerializeObject(dic, Formatting.Indented);
             File.WriteAllText(filePath, output);
