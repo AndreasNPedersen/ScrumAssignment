@@ -11,7 +11,7 @@ namespace SCRUMAssignment.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-
+        public Dictionary<int,Models.Kategori> Kategori { get; set; }
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
@@ -19,7 +19,7 @@ namespace SCRUMAssignment.Pages
 
         public void OnGet()
         {
-
+            Kategori = new Services.KategoriHandler().GetDictionary();
         }
     }
 }
