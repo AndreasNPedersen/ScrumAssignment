@@ -1,0 +1,30 @@
+﻿@page
+@model SCRUMAssignment.Pages.AddEmneModel
+@{
+    ViewData["Title"] = "Tilføj Emne";
+}
+<div class="container">
+        {
+            <form method="post">
+                <div asp-validation-summary="ModelOnly"></div>
+                <div class="form-group">
+                    <label class="form-text">ID</label>
+                    <input asp-for="@Model.Emne.Id" class="form-control" />
+                    <span asp-validation-for="@Model.Emne.Id" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-text">Indhold</label>
+                    <input asp-for="@Model.Emne.Indhold" class="form-control" />
+                    <span asp-validation-for="@Model.Emne.Indhold" class="text-danger"></span>
+                </div>
+
+                <div style="padding:1rem;"></div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success float-right" value="Tilføj Emne" style="padding:1rem;" />
+                </div>
+            </form>
+        
+    }
+
+
+</div>
