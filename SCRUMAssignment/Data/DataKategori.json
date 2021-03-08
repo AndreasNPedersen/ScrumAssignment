@@ -3,6 +3,15 @@
     "Id": 1,
     "ImgPath": "tal",
     "KategoriNavn": "Tal",
-    "Emner": {}
+    "Emner": {
+      "0": {
+        "Id": 0,
+        "Indhold": "1"
+      },
+      "1": {
+        "Id": 1,
+        "Indhold": "2"
+      }
+    }
   }
 }
