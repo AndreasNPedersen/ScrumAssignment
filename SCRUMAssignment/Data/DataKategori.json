@@ -1,42 +1,8 @@
 {
-  "1": {
-    "Id": 1,
-    "ImgPath": "123",
+  "0": {
+    "Id": 0,
+    "ImgPath": "tal",
     "KategoriNavn": "Tal",
-    "Emner": [
-      {
-        "Id": 2,
-        "Indhold": "1"
-      }
-    ]
-  },
-  "2": {
-    "Id": 2,
-    "ImgPath": "123",
-    "KategoriNavn": "Bogstav",
-    "Emner": [
-      {
-        "Id": 1,
-        "Indhold": "A"
-      }
-    ]
-  },
-  "3": {
-    "Id": 3,
-    "ImgPath": "nva",
-    "KategoriNavn": "Navne",
-    "Emner": []
-  },
-  "4": {
-    "Id": 4,
-    "ImgPath": "er",
-    "KategoriNavn": "Efternavne",
-    "Emner": []
-  },
-  "6": {
-    "Id": 6,
-    "ImgPath": "emo",
-    "KategoriNavn": "Emojis",
-    "Emner": []
+    "Emner": {}
   }
 }

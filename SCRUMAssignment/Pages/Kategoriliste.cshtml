@@ -19,11 +19,11 @@
             <th>@kategori.KategoriNavn</th>
             <th>Mulighedder</th>
         </tr>
-        @foreach (Models.Emne emne in kategori.Emner)
+        @foreach (Models.Emne emne in kategori.Emner.Values)
         {
             <tr>
                 <td>@emne.Indhold</td>
-                <td><a asp-page="/DeletePageEmn" asp-route-id="@emne.Id" class="btn btn-primary m-1">Slet</a></td>
+                <td><a asp-page="/DeletePageEmn" asp-route-id="@emne.Id,@kategori.Id" class="btn btn-primary m-1">Slet</a></td>
             </tr>
         }
     }

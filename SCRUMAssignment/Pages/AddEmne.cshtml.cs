@@ -26,11 +26,11 @@ namespace SCRUMAssignment.Pages
                 return Page();
 
             }
-            new EmneHandler().Create(Emne);
+            
 
             int hej = Convert.ToInt32(Request.Form["listkat"]);
             Models.Kategori kat = new Services.KategoriHandler().Get(hej);
-            kat.Emner.Add(Emne);
+            kat.Emner.Add(Emne.Id,Emne);
             new KategoriHandler().Update(kat, kat.Id);
 
 

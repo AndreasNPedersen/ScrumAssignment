@@ -11,14 +11,20 @@ namespace SCRUMAssignment.Pages
     {
         [BindProperty]
         public Models.Emne Emne { get; set; }
-        public void OnGet(int id)
+        [BindProperty]
+        public Models.Kategori Kategori { get; set; }
+        public void OnGet(int idEmne,int idKat)
         {
-            Emne = new Services.EmneHandler().Get(id);
+            
+            Kategori = new Services.KategoriHandler().Get(idKat);
+            Emne = Kategori.Emner[idEmne];
         }
 
         public IActionResult OnPost()
         {
-            new Services.EmneHandler().Delete(Emne.Id);
+            Kategori = new Services.KategoriHandler().Get(Kategori.Id);
+            Kategori.Emner.Remove(Emne.Id);
+            new Services.KategoriHandler().Update(Kategori, Kategori.Id);
             return RedirectToPage("Index");
         }
     }

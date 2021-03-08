@@ -10,6 +10,6 @@ namespace SCRUMAssignment.Models
         public int Id { get; set; }
         public string ImgPath { get; set; }
         public string KategoriNavn { get; set; }
-        public List<Emne> Emner { get; set; }
+        public Dictionary<int, Emne> Emner { get; set; }
     }
 }
