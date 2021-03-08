@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using SCRUMAssignment.Models;
 
 namespace SCRUMAssignment.Pages
 {
@@ -13,18 +14,27 @@ namespace SCRUMAssignment.Pages
         public Models.Emne Emne { get; set; }
         [BindProperty]
         public Models.Kategori Kategori { get; set; }
-        public void OnGet(int idEmne,int idKat)
+
+
+        public void OnGet(int id)
         {
             
-            Kategori = new Services.KategoriHandler().Get(idKat);
-            Emne = Kategori.Emner[idEmne];
+            foreach (Kategori kat in new Services.KategoriHandler().GetDictionary().Values)
+            {
+                if (kat.Emner.ContainsKey(id))
+                {
+                Emne = kat.Emner[id];
+                    Kategori = kat;
+                }
+            }
+            
         }
 
         public IActionResult OnPost()
         {
-            Kategori = new Services.KategoriHandler().Get(Kategori.Id);
-            Kategori.Emner.Remove(Emne.Id);
-            new Services.KategoriHandler().Update(Kategori, Kategori.Id);
+            Kategori kat = new Services.KategoriHandler().Get(Kategori.Id);
+            kat.Emner.Remove(Emne.Id);
+            new Services.KategoriHandler().Update(kat, kat.Id);
             return RedirectToPage("Index");
         }
     }

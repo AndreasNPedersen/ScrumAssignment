@@ -9,7 +9,7 @@ namespace SCRUMAssignment.Pages.Shared
 {
     public class EmneModel : PageModel
     {
-
+        [BindProperty]
         public Dictionary<int, Models.Kategori> Liste { get; set; }
 
         public EmneModel()
