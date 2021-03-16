@@ -23,7 +23,7 @@ namespace SCRUMAssignment.Pages
             {
                 if (kat.Emner.ContainsKey(id))
                 {
-                Emne = kat.Emner[id];
+                    Emne = kat.Emner[id];
                     Kategori = kat;
                 }
             }
